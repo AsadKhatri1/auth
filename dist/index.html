@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>99th-Blog</title>
+    <link rel="icon" type="image/x-icon" href="fav.jpeg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Poppins:wght@300&family=Roboto:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+#header{
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 20px 80px;
+    background-color: #e0e4f8;
+    box-shadow: 0px 5px 15px rgba(41, 16, 16, 0.5);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0px;
+}  
+  #navbar{
+    
+   display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  
+  
+  
+}
+.name{
+    font-family: "poppins";
+    font-size: 30px;
+    font-weight: 800;
+}
+.lg{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #088178;
+    font-weight: 900;
+
+}
+#navbar li{
+    list-style: none;
+    text-transform: uppercase;
+    padding: 0px 20px;
+    position: relative;;
+    
+}
+#navbar li a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-size: 16px;
+    transition: 0.3s ease;
+} 
+#navbar li a:hover{
+    color: #088178;
+}   
+#navbar li a:hover,
+#navbar li a.active{
+    color: #088178;
+}   
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+#hero{
+    background-image: url(https://static.wixstatic.com/media/5bfb6f_26f1a5c736e544e09c63c82a4c792645~mv2_d_3839_1306_s_2.jpg/v1/fill/w_1898,h_653,al_b,q_85,usm_0.66_1.00_0.01,enc_auto/5bfb6f_26f1a5c736e544e09c63c82a4c792645~mv2_d_3839_1306_s_2.jpg);
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    color: #fafafa;
+    font-family: "open-sans";
+    position: relative;
+    background-repeat: no-repeat;
+
+    
+}
+.content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 33%;
+    top: 10%;
+    
+}
+#hero p{
+    font-size: 22px;
+    font-family: "open sans";
+    font-weight: 700;
+}
+#hero h1{
+    font-size: 65px;
+    font-family: "poppins";
+    font-weight: 800;
+    padding: 15px;
+}
+#main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.items{
+flex-basis: 100%;
+box-shadow: 0px 0px 5px #ccc;
+padding:2%;
+margin: 20px;
+}
+.cross{
+    font-size: 35px;
+    cursor: pointer;
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+}
+.btns{
+    color: white;
+    background-color: green;
+    width: 50px;
+    height: 30px;
+    padding: 2px;
+    border: none;
+    border-radius: 6px;
+    /* position: absolute;
+    top: 2;
+    right: 0; */
+}
+#logoutS{
+    border-radius: 12px;
+    width: auto;
+    padding: 6px 16px;
+    background-color: rgb(181, 3, 3);
+    color: white;
+    box-shadow: 0px 0px 5px #ccc;
+    border: none;
+    transition: all 0.3s;
+}
+#logoutS:hover{
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+    box-shadow: 0px 0px 10px red;
+}
+
+@media only screen and (max-width: 550px) {
+    #navbar{
+    
+        display: flex; 
+        /* flex-direction: column;
+       align-items: stretch; */
+       justify-content: center;
+       flex-wrap: wrap;
+   
+       
+     }
+     #navbar li a{
+        margin: 4px 0px;
+     }
+     /* #hero{
+        opacity: 0.6;
+     } */
+
+
+  }
+
+
+</style>
+
+
+
+</head>
+
+<body>
+    <header></header>
+
+    <section id="header">
+
+
+        <h4 class="name"><span class="lg">99<sup>th</sup></span> Tales</h4>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="" class="active">Home</a></li>
+                <li><a href="">Travel</a></li>
+                <li><a href="">Eat</a></li>
+                <li><a href="">Relax</a></li>
+                
+            </ul>
+            <button id="logoutS" >Logout</button>
+        </div>
+    </section>
+    <section id="hero">
+        <div class="content">
+            <p>Travel Blog</p>
+            <h1>Tell A <span style="color: #088178;">Tale.</span></h1>
+            <p>99 Destinations, 99 Stories, One Incredible <span style="color: #088178;">Blog</span></p>
+
+        </div>
+    </section>
+
+    <section id="blog-form">
+        <div class="container">
+            <h1 class=" my-4" style="color: #088178;">ADD YOUR BLOG</h1>
+            <form class="add-blog">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name"
+                        required />
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email"
+                        required />
+                </div>
+                <div class="mb-3">
+                    <label for="category" class="form-label">Blog Category</label>
+                    <input type="text" class="form-control" id="category" name="category" placeholder="Category"
+                        required />
+                </div>
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Blog title"
+                        required />
+                </div>
+                <div class="mb-3">
+                    <label for="blog" class="form-label">Blog</label>
+                    <textarea class="form-control" id="blog" rows="3" name="blog" placeholder="Wite your blogs"
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-success">Add Blog</button>
+            </form>
+        </div>
+    </section>
+
+    <h1 class="text-center my-5" style="color: #088178;">LATEST BLOGS</h1>
+
+    <section id="main" class="container">
+     
+
+</section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+        
+        <script src="bundle.js"></script>
+   
+</body>
+
+</html> 

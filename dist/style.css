@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading{
+    font-family: poppins;
+    color: #187;
+    font-weight: 700;
+}
+form {
+    width: 80%;
+}
+form input{
+    border: none;
+    border-bottom: 1px solid #187;
+    border-radius: 12px;
+    height: 40px;
+    box-shadow: 0px 0px 5px #ccc;
+    width: 70%;
+    text-indent: 10px;
+    margin: 10px 0px;
+}
+
+.btn-s{
+    color: white;
+    background-color: #187;
+    transition: all 0.3s;
+}
+.btn-s:hover{
+    color:#187;
+    background-color: rgb(255, 255, 255);
+}
