@@ -90,25 +90,25 @@ function handleProtectedRoute(route) {
         currentRoute.path === "login.html"
       ) {
         if (isUserAuth()) {
-          window.location.href = "/dist/";
+          window.location.href = "/auth/dist/";
         }
       } else if (!isUserAuth()) {
         // If the route is protected and the user is not authenticated, redirect to the login page
-        window.location.href = "/dist/login.html";
+        window.location.href = "/auth/dist/login.html";
         console.log('user is not authenticated')
       }
 
     //   if(currentRoute.path === "index.html"){
     //     if(isUserAuth()){
-    //         window.location.href = "/dist/index.html";
+    //         window.location.href = "/auth/dist/index.html";
     //     }
     //     else{
-    //         window.location.href = "/dist/login.html";
+    //         window.location.href = "/auth/dist/login.html";
     //     }
     //   }
     } else {
       // Handle unknown routes (e.g., 404)
-      window.location.href = "/dist/index.html"; // Redirect to a default route or an error page
+      window.location.href = "/auth/dist/index.html"; // Redirect to a default route or an error page
     }
   }
 
@@ -152,7 +152,7 @@ if (signup) {
 
                     await setDoc(doc(db, "users", user.uid), userData)
 
-                    window.history.pushState({},"","/dist/index.html")
+                    window.history.pushState({},"","/auth/dist/index.html")
                     handleRouteChange() 
 
 
@@ -195,7 +195,7 @@ if (loginform) {
                 localStorage.setItem('id', user.uid
                 )
 
-                window.history.pushState({},"","/dist/index.html")
+                window.history.pushState({},"","/auth/dist/index.html")
                 handleRouteChange()
                 window.location.reload()
 
@@ -217,7 +217,7 @@ if(logoutS){
 logoutS.addEventListener('click',()=>{
     signOut(auth).then(() => {
         localStorage.clear()
-        window.history.pushState({},"","/dist/login.html")
+        window.history.pushState({},"","/auth/dist/login.html")
         handleRouteChange()
         console.log('Logout success')
         window.location.reload()
